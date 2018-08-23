@@ -53,6 +53,12 @@ public class Sprite {
 		x+=moveX;
 		y-=moveY;
 	}
+	
+	public void deprocessMovement() {
+		x-=moveX;
+		y+=moveY;
+	}
+	
 	public boolean isDeadly() {
 		return deadly;
 	}
