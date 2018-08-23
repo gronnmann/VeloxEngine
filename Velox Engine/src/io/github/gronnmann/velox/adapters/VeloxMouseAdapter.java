@@ -17,7 +17,7 @@ public class VeloxMouseAdapter extends MouseAdapter{
 	}
 
 	public void mouseClicked(MouseEvent e) {
-		Print.debug("Mouse click: X:" + e.getX() + ", Y: " + e.getY());
+		Print.debug("Mouse click: X:" + e.getX() + ", Y:" + e.getY());
 		for (EngineElement en : engine.getElements()) {
 			en.mouseClicked(e);
 		}
@@ -53,7 +53,7 @@ public class VeloxMouseAdapter extends MouseAdapter{
 	}
 	
 	public void mouseWheelMoved(MouseEvent e) {
-		Print.debug("Mouse wheel move: X:" + e.getX() + ", Y: " + e.getY());
+		Print.debug("Mouse wheel move: X:" + e.getX() + ", Y:" + e.getY());
 		for (EngineElement en : engine.getElements()) {
 			en.mouseWheelMoved(e);
 		}

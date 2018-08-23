@@ -28,7 +28,7 @@ public class BasicEngineElement implements EngineElement{
 	public BasicEngineElement(Engine en) {
 		this.engine = en;
 		
-		background = new ImageIcon("res/background.png").getImage().getScaledInstance(engine.WIDTH, engine.HEIGHT, Image.SCALE_FAST);
+		background = new ImageIcon(getClass().getResource("/background.png")).getImage().getScaledInstance(engine.WIDTH, engine.HEIGHT, Image.SCALE_FAST);
 	}
 	
 	

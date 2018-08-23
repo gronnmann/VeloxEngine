@@ -6,6 +6,8 @@ import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 
+import io.github.gronnmann.velox.Print;
+
 public class Sprite {
 	public int moveX = 0, moveY = 0;
 	public int x, y;
@@ -20,14 +22,17 @@ public class Sprite {
 		this.y = y;
 		this.width = width;
 		this.height = height;
-		this.img = new ImageIcon("res/" + img + ".png").getImage();
+		Print.debug("Sprite: Fetching image from location: /" + img + ".png");
+		Print.debug("Bounds: " + x + ", " + y + ", " + width + ", " + height);
+		this.img = new ImageIcon(getClass().getResource("/" + img + ".png")).getImage();
 		this.img = this.img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
 		this.imgN = img;
 	}
 	
 	public void rescale() {
-		this.img = new ImageIcon("res/" + imgN + ".png").getImage();
+		this.img = new ImageIcon(getClass().getResource("/" + img + ".png")).getImage();
 		this.img = this.img.getScaledInstance(width, height, Image.SCALE_SMOOTH);
+		Print.debug("Rescaling sprite. New bounds: " + x + ", " + y + ", " + width + ", " + height);
 	}
 	
 	public Image getImage(){
